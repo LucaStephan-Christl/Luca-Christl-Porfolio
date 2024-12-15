@@ -3,10 +3,10 @@ import { ThemeToggle } from "./ThemeToggle";
 
 function Navbar() {
   return (
-    <nav className="fixed py-5 left-1/2 -translate-x-1/2">
-      <ul className="py-5 px-8 backdrop-blur-30 bg- rounded-full flex flex-row gap-8 items-center">
+    <nav className="z-10 fixed py-5 left-1/2 -translate-x-1/2">
+      <ul className="backdrop-blur-xl bg-base-300 bg-opacity-20 py-5 px-8 rounded-full flex flex-row gap-8 items-center">
         <li>
-          <a className="link link-hover" href="#">
+          <a className="" href="#">
             Home
           </a>
         </li>

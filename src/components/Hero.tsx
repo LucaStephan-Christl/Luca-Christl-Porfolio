@@ -2,18 +2,22 @@ import React from "react";
 
 function Hero() {
   return (
-    <div id="#Hero" className="hero bg-base-200 min-h-screen">
-      <div className="hero-content text-center">
-        <div className="max-w-md">
-          <h1 className="text-5xl font-bold">Hi, I&apos;m Luca</h1>
-          <p className="py-6">
-            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
-            a id nisi.
-          </p>
-          <button className="btn btn-outline btn-xs sm:btn-sm md:btn-md lg:btn-lg">
-            Get Started
-          </button>
+    <div id="#Hero" className="hero min-h-screen">
+      <div className="hero-content flex-col text-center">
+        <div className="flex items-center gap-4">
+          <div className="avatar">
+            <div className="w-32 rounded-full outline">
+              <img src="/images/profilepic.jpg" alt="picture of luca christl" />
+            </div>
+          </div>
+          <div className="text-left">
+            <h2 className="text-4xl font-bold">Luca Christl</h2>
+            <p>based in Aargau, Switzerland</p>
+          </div>
+        </div>
+        <div className="flex flex-col font-bold text-9xl">
+          <span className="-translate-x-10">Frontend</span>
+          <span className="translate-x-10">Developer</span>
         </div>
       </div>
     </div>
