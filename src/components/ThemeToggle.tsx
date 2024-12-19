@@ -7,7 +7,7 @@ interface Props {
 export const ThemeToggle = (props: Props) => {
   return (
     <div className={props.classname ? props.classname : ""}>
-      <label className="swap swap-rotate transition duration-300 hover:rotate-45">
+      <label className="swap swap-rotate transition duration-300 hover:rotate-45 hover:text-accent">
         {/* this hidden checkbox controls the state */}
         <input type="checkbox" className="theme-controller" value="retro" />
 
