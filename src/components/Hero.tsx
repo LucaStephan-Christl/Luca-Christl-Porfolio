@@ -15,9 +15,9 @@ function Hero() {
             <p>based in Aargau, Switzerland</p>
           </div>
         </div>
-        <div className="flex flex-col font-bold text-9xl">
-          <span className="-translate-x-10">Frontend</span>
-          <span className="translate-x-10">Developer</span>
+        <div className="flex flex-col font-bold text-7xl lg:text-9xl">
+          <span className="">Frontend</span>
+          <span className="">Developer</span>
         </div>
       </div>
     </div>
