@@ -81,6 +81,7 @@ function Projects() {
             <h2 className="card-title">Personal Portfolio Website</h2>
             <div className="flex gap-2 flex-wrap">
               <div className="badge badge-accent">Next.js</div>
+              <div className="badge badge-warning">Tailwind CSS</div>
             </div>
             <p className="max-w-4xl">
               This is the Site your currently viewing. I wanted to create a
