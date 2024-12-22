@@ -2,11 +2,11 @@ import React from "react";
 
 function Hero() {
   return (
-    <div id="#Hero" className="hero min-h-screen">
-      <div className="hero-content flex-col text-center">
+    <section id="Home" className="hero min-h-screen">
+      <div className="hero-content flex-col gap-8 text-center">
         <div className="flex items-center gap-4">
-          <div className="avatar">
-            <div className="w-32 rounded-full outline">
+          <div className="avatar transition-all hover:scale-110">
+            <div className="w-32 rounded-full border-2 border-base-content shadow-lg">
               <img src="/images/profilepic.jpg" alt="picture of luca christl" />
             </div>
           </div>
@@ -15,12 +15,11 @@ function Hero() {
             <p>based in Aargau, Switzerland</p>
           </div>
         </div>
-        <div className="flex flex-col font-bold text-7xl lg:text-9xl">
-          <span className="">Frontend</span>
-          <span className="">Developer</span>
+        <div className="font-serif flex text-7xl lg:text-9xl text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-accent element-to-rotate">
+          Frontend Developer
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

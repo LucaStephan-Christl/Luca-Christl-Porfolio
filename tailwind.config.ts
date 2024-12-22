@@ -25,5 +25,5 @@ export default {
     themeRoot: ":root", // The element that receives theme color CSS variables
   },
   // eslint-disable-next-line @typescript-eslint/no-require-imports
-  plugins: [require("daisyui")],
+  plugins: [require("daisyui"), require("tailwindcss-motion")],
 } satisfies Config;

@@ -1,15 +1,24 @@
 import React from "react";
+import { useTheme } from "./ThemeProvider";
 
 interface Props {
   classname?: string;
 }
 
 export const ThemeToggle = (props: Props) => {
+  const { Theme, toggleTheme } = useTheme();
   return (
     <div className={props.classname ? props.classname : ""}>
       <label className="swap swap-rotate transition duration-300 hover:rotate-45 hover:text-primary">
         {/* this hidden checkbox controls the state */}
-        <input type="checkbox" className="theme-controller" value="retro" />
+        <input
+          type="checkbox"
+          className="theme-controller"
+          checked={Theme !== "sunset"}
+          onChange={() => {
+            toggleTheme();
+          }}
+        />
 
         {/* sun icon */}
         <svg
