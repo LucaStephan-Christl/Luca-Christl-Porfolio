@@ -9,3 +9,9 @@ html {
 .btn:hover {
   transform: scale(1.05);
 }
+
+@layer utilities {
+  .pause-animation {
+    animation-play-state: paused;
+  }
+}

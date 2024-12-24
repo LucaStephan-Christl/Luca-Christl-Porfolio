@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
 import type { Config } from "tailwindcss";
 
 export default {
@@ -8,14 +9,19 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      animation: {
+        "infinite-scroll": "infinite-scroll 25s linear infinite",
+      },
+      keyframes: {
+        "infinite-scroll": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-100%)" },
+        },
       },
     },
   },
   daisyui: {
-    themes: true, // false: only light + dark | true: all themes | array: specific themes like this ["light", "dark", "cupcake"]
+    themes: true, // false: only cupcake + dark | true: all themes | array: specific themes like this ["cupcake", "dark", "cupcake"]
     darkTheme: "sunset", // name of one of the included themes for dark mode
     base: true, // applies background color and foreground color for root element by default
     styled: true, // include daisyUI colors and design decisions for all components
@@ -24,6 +30,9 @@ export default {
     logs: true, // Shows info about daisyUI version and used config in the console when building your CSS
     themeRoot: ":root", // The element that receives theme color CSS variables
   },
-  // eslint-disable-next-line @typescript-eslint/no-require-imports
-  plugins: [require("daisyui"), require("tailwindcss-motion")],
+  plugins: [
+    require("daisyui"),
+    require("tailwindcss-motion"),
+    require("tailwindcss-intersect"),
+  ],
 } satisfies Config;

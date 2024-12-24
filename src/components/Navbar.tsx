@@ -5,8 +5,8 @@ import { ThemeToggle } from "./ui/ThemeToggle";
 function Navbar() {
   const [MenuOpen, setMenuOpen] = useState(false);
   return (
-    <nav>
-      <label className="md:hidden btn btn-circle swap swap-rotate fixed top-5 right-5 z-20">
+    <nav className="">
+      <label className="md:hidden btn btn-circle swap swap-rotate fixed top-5 right-5 z-30">
         {/* this hidden checkbox controls the state */}
         <input onChange={() => setMenuOpen(!MenuOpen)} type="checkbox" />
 
@@ -34,36 +34,50 @@ function Navbar() {
       </label>
       {
         <ul
-          className={`md:hidden fixed right-0 h-screen w-1/2 bg-base-200 ${
-            MenuOpen
-              ? "motion-translate-x-in-100"
-              : "motion-translate-x-out-100"
-          } p-10 flex flex-col justify-center gap-10 text-xl text-right z-10`}
+          className={`md:hidden fixed right-0 h-screen w-1/2 bg-base-200 transition-all duration-500 ease-in-out translate-x-full ${
+            MenuOpen ? "translate-x-0" : ""
+          } p-10 flex flex-col justify-center gap-10 text-xl text-right z-20`}
         >
           <li>
-            <a className="hover:text-primary" href="#Home">
+            <a
+              className="hover:text-primary"
+              href="#Home"
+              onClick={() => setMenuOpen(false)}
+            >
               Home
             </a>
           </li>
           <li>
-            <a className="hover:text-primary" href="#Experience">
+            <a
+              className="hover:text-primary"
+              href="#Experience"
+              onClick={() => setMenuOpen(false)}
+            >
               Experience
             </a>
           </li>
           <li>
-            <a className="hover:text-primary" href="#">
+            <a
+              className="hover:text-primary"
+              href="#"
+              onClick={() => setMenuOpen(false)}
+            >
               About Me
             </a>
           </li>
           <li>
-            <a className="hover:text-primary" href="#">
+            <a
+              className="hover:text-primary"
+              href="#"
+              onClick={() => setMenuOpen(false)}
+            >
               Contact
             </a>
           </li>
           <ThemeToggle classname="" />
         </ul>
       }
-      <ul className="hidden md:flex gap-8 fixed items-center m-5 -translate-x-1/2 left-1/2  py-5 px-8 border border-neutral rounded-full bg-transparent backdrop-blur-xl z-20 border-opacity-15 whitespace-nowrap shadow-xl">
+      <ul className="hidden md:flex gap-8 fixed items-center m-5 -translate-x-1/2 left-1/2 py-5 px-8 border border-neutral rounded-full bg-transparent backdrop-blur-xl border-opacity-15 whitespace-nowrap shadow-xl -motion-translate-y-in-150 motion-duration-[2s] motion-delay-[5s] z-10">
         <li>
           <a className="hover:text-primary" href="#Home">
             Home
