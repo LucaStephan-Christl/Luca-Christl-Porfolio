@@ -28,10 +28,13 @@ function Hero() {
       id="Home"
       className={`hero min-h-screen ${
         Theme === "sunset" ? "motion-bg-in-black" : "motion-bg-in-white"
-      } motion-duration-[6s] motion-delay-[2s]`}
+      } motion-duration-[6s] motion-delay-[5s]`}
     >
       <div className="hero-content flex-col gap-8 text-center">
-        <div className="flex items-center gap-4 motion-translate-y-in-100 motion-duration-[3s] motion-delay-[2s]">
+        <h1 className="absolute text-9xl opacity-0 motion-opacity-in-100 motion-delay-[3s]/opacity motion-preset-focus-lg">
+          Hi ✌🏻, I&apos;m Luca
+        </h1>
+        <div className="flex items-center gap-4 motion-translate-y-in-100 motion-duration-[3s] motion-opacity-in-0 motion-delay-[4s] motion-ease-in-out">
           <div className="avatar">
             <div className="w-32 rounded-full border-2 border-base-content shadow-lg">
               <img src="/images/profilepic.jpg" alt="picture of luca christl" />
@@ -44,7 +47,7 @@ function Hero() {
         </div>
         <div className="flex flex-col justify-center items-center">
           <div
-            className={`font-extracupcake uppercase text-7xl lg:text-9xl text-transparent bg-clip-text bg-gradient-to-r ${
+            className={`font-light uppercase text-7xl lg:text-9xl text-transparent bg-clip-text bg-gradient-to-r ${
               Theme === "sunset"
                 ? "from-primary via-secondary to-accent"
                 : "from-primary to-secondary"
@@ -53,11 +56,11 @@ function Hero() {
             Frontend
           </div>
           <div
-            className={`font-extracupcake uppercase text-7xl lg:text-9xl text-transparent bg-clip-text bg-gradient-to-r ${
+            className={`font-light uppercase text-7xl lg:text-9xl text-transparent bg-clip-text bg-gradient-to-r ${
               Theme === "sunset"
                 ? "from-primary via-secondary to-accent"
                 : "from-primary to-secondary"
-            } motion-preset-focus-lg -motion-translate-x-in-50 motion-delay-[3.5s] motion-duration-[3s] motion-ease-in-out`}
+            } motion-preset-focus-lg motion-translate-x-in-50 motion-delay-[3.5s] motion-duration-[3s] motion-ease-in-out`}
           >
             Developer
           </div>

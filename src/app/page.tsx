@@ -13,8 +13,8 @@ export default function Home() {
       <ThemeProvider>
         <div className="fixed bg-gradient-to-t opacity-10 from-accent to-transparent size-full -z-10"></div>
         <Navbar />
-        <Hero />
         <div className="flex flex-col gap-48">
+          <Hero />
           <div className="container mx-auto lg:px-32 px-8 flex flex-col gap-48">
             <Experience />
           </div>
