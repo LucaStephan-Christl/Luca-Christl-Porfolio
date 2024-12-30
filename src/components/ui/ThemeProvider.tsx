@@ -8,7 +8,7 @@ export const ThemeProvider = ({
 }: Readonly<{
   children: React.ReactNode;
 }>) => {
-  const [Theme, setTheme] = useState(localStorage.getItem("theme") || "sunset");
+  const [Theme, setTheme] = useState("sunset");
 
   const toggleTheme = () => {
     const newTheme = Theme === "sunset" ? "cupcake" : "sunset";
@@ -18,6 +18,13 @@ export const ThemeProvider = ({
       localStorage.setItem("theme", newTheme);
     }
   };
+  useEffect(() => {
+    // Access localStorage only on the client side
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+      setTheme(savedTheme);
+    }
+  }, []);
 
   useEffect(() => {
     if (typeof window !== "undefined") {

@@ -3,7 +3,7 @@ import Section from "../ui/Section";
 
 function Projects() {
   return (
-    <Section title="Projects" id="Projects">
+    <Section title="Projects" id="Experience">
       <div className="grid gap-8 xl:grid-cols-3 lg:grid-cols-2">
         <div className="card xl:col-span-2 bg-base-200 shadow-xl">
           <figure className="bg-[#FFEAEA]">
@@ -82,6 +82,7 @@ function Projects() {
             <div className="flex gap-2 flex-wrap">
               <div className="badge badge-accent">Next.js</div>
               <div className="badge badge-warning">Tailwind CSS</div>
+              <div className="badge badge-error">Figma</div>
             </div>
             <p className="max-w-4xl">
               This is the Site your currently viewing. I wanted to create a

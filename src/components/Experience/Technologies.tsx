@@ -50,7 +50,7 @@ const techs = (
 function Technologies() {
   return (
     <section
-      id="Technologies"
+      id="Experience"
       className="bg-base-200 p-6 shadow-xl rounded-lg w-full"
     >
       <div className="group w-full inline-flex flex-nowrap overflow-hidden lg:[mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)] text-center">

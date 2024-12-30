@@ -13,9 +13,7 @@ function Experience() {
           <button
             role="tab"
             className={`tab ${
-              showEducation
-                ? ""
-                : "tab-active motion-preset-fade-lg motion-preset-slide-left-lg"
+              showEducation ? "transition-all hover:text-primary" : "tab-active"
             } text-lg`}
             onClick={() => {
               setShowEducation(false);
@@ -27,8 +25,8 @@ function Experience() {
             role="tab"
             className={`tab ${
               !showEducation
-                ? ""
-                : "tab-active motion-preset-fade-lg motion-preset-slide-right-lg"
+                ? "transition-all hover:text-primary"
+                : "tab-active"
             } text-lg`}
             onClick={() => {
               setShowEducation(true);

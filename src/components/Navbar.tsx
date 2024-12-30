@@ -1,9 +1,32 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ThemeToggle } from "./ui/ThemeToggle";
 
 function Navbar() {
   const [MenuOpen, setMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
+
+  useEffect(() => {
+    const sections = document.querySelectorAll("section");
+    const observerOptions = {
+      root: null, // Use the viewport
+      rootMargin: "0px",
+      threshold: 0.5, // Trigger when 50% of the section is in view
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    }, observerOptions);
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => observer.disconnect(); // Cleanup on component unmount
+  }, []);
+
   return (
     <nav className="">
       <label className="md:hidden btn btn-circle swap swap-rotate fixed top-5 right-5 z-30">
@@ -35,69 +58,49 @@ function Navbar() {
       {
         <ul
           className={`md:hidden fixed right-0 h-screen w-1/2 bg-base-200 transition-all duration-500 ease-in-out translate-x-full ${
-            MenuOpen ? "translate-x-0" : ""
+            MenuOpen ? "-translate-x-0" : ""
           } p-10 flex flex-col justify-center gap-10 text-xl text-right z-20`}
         >
-          <li>
-            <a
-              className="hover:text-primary"
-              href="#Home"
-              onClick={() => setMenuOpen(false)}
-            >
-              Home
-            </a>
-          </li>
-          <li>
-            <a
-              className="hover:text-primary"
-              href="#Experience"
-              onClick={() => setMenuOpen(false)}
-            >
-              Experience
-            </a>
-          </li>
-          <li>
-            <a
-              className="hover:text-primary"
-              href="#"
-              onClick={() => setMenuOpen(false)}
-            >
-              About Me
-            </a>
-          </li>
-          <li>
-            <a
-              className="hover:text-primary"
-              href="#"
-              onClick={() => setMenuOpen(false)}
-            >
-              Contact
-            </a>
-          </li>
+          {["Home", "Experience", "About", "Contact"].map((section) => (
+            <li key={section}>
+              <a
+                href={`#${section}`}
+                className={`group relative ${
+                  activeSection === section ? "text-primary" : ""
+                } hover:text-primary transition-all`}
+              >
+                {section}
+                <span
+                  className={`absolute left-0 bottom-0 w-full ${
+                    activeSection === section ? "scale-100" : "scale-0"
+                  } h-[2px] transition-all bg-primary group-hover:scale-100`}
+                />
+              </a>
+            </li>
+          ))}
+
           <ThemeToggle classname="" />
         </ul>
       }
       <ul className="hidden md:flex gap-8 fixed items-center m-5 -translate-x-1/2 left-1/2 py-5 px-8 border border-neutral rounded-full bg-transparent backdrop-blur-xl border-opacity-15 whitespace-nowrap shadow-xl -motion-translate-y-in-150 motion-duration-[2s] motion-delay-[5s] z-10">
-        <li>
-          <a className="hover:text-primary" href="#Home">
-            Home
-          </a>
-        </li>
-        <li>
-          <a className="hover:text-primary" href="#Experience">
-            Experience
-          </a>
-        </li>
-        <li>
-          <a className="hover:text-primary" href="#">
-            About Me
-          </a>
-        </li>
-        <li>
-          <a className="hover:text-primary" href="#">
-            Contact
-          </a>
-        </li>
+        {["Home", "Experience", "About", "Contact"].map((section) => (
+          <li key={section}>
+            <a
+              href={`#${section}`}
+              className={`group relative ${
+                activeSection === section ? "text-primary" : ""
+              } hover:text-primary transition-all`}
+            >
+              {section}
+              <span
+                className={`absolute left-0 bottom-0 w-full ${
+                  activeSection === section ? "scale-100" : "scale-0"
+                } h-[2px] transition-all bg-primary group-hover:scale-100`}
+              />
+            </a>
+          </li>
+        ))}
+
         <ThemeToggle classname="" />
       </ul>
     </nav>

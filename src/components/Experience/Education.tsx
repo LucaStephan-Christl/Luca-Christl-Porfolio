@@ -74,10 +74,10 @@ function Education() {
           <div className="text-lg font-black">
             Kantonsschule Wohlen in Switzerland
           </div>
-          Due to my interest in science in general, when the time came, I chose
-          my major subject to be mathematics and physics and later also Computer
-          Science as an additional subject, where I fell in love with it. Aswell
-          as the final project in the subject.
+          Because of my interest in science in general, when the time came, I
+          chose my major subject to be mathematics and physics and later also
+          Computer Science as an additional subject, where I fell in love with
+          it. Aswell as the final project in the subject.
         </div>
         <hr />
       </li>
