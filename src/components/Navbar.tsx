@@ -82,7 +82,7 @@ function Navbar() {
           <ThemeToggle classname="" />
         </ul>
       }
-      <ul className="hidden md:flex gap-8 fixed items-center m-5 -translate-x-1/2 left-1/2 py-5 px-8 border border-neutral rounded-full bg-transparent backdrop-blur-xl border-opacity-15 whitespace-nowrap shadow-xl -motion-translate-y-in-150 motion-duration-[2s] motion-delay-[5s] z-10">
+      <ul className="hidden md:flex gap-8 fixed items-center m-5 -translate-x-1/2 left-1/2 py-3 px-7 border border-neutral rounded-full bg-transparent backdrop-blur-xl border-opacity-15 whitespace-nowrap shadow-xl -motion-translate-y-in-150 motion-duration-[2s] motion-delay-[5s] z-10">
         {["Home", "Experience", "About", "Contact"].map((section) => (
           <li key={section}>
             <a

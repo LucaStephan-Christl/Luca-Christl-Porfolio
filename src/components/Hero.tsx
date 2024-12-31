@@ -26,7 +26,7 @@ function Hero() {
   return (
     <section
       id="Home"
-      className={`hero min-h-screen overflow-hidden ${
+      className={`hero min-h-screen overflow-hidden -z-20 ${
         Theme === "sunset" ? "motion-bg-in-black" : "motion-bg-in-white"
       } motion-duration-[6s] motion-delay-[5s]`}
     >
