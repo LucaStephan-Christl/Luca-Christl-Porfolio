@@ -93,7 +93,7 @@ function Navbar() {
 
         <ThemeToggle />
       </ul>
-      <ul className="hidden md:flex flex-col gap-8 fixed items-center m-5 -translate-y-1/2 top-1/2 py-7 px-3 border border-neutral rounded-full bg-transparent backdrop-blur-lg border-opacity-15 whitespace-nowrap shadow-xl -motion-translate-x-in-150 motion-duration-[2s] motion-delay-[5s] z-10">
+      <ul className="hidden md:flex flex-col gap-8 fixed items-center m-5 -translate-y-1/2 top-1/2 py-5 px-3 border border-neutral rounded-full bg-transparent backdrop-blur-lg border-opacity-15 whitespace-nowrap shadow-xl -motion-translate-x-in-150 motion-duration-[2s] motion-delay-[5s] z-10">
         {Object.entries({
           Home: <FaHome style={{ height: "24px", width: "24px" }} />,
           Experience: <IoDocuments style={{ height: "24px", width: "24px" }} />,
