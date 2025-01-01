@@ -116,7 +116,7 @@ function Navbar() {
             </a>
           </li>
         ))}
-
+        <div className="divider -my-2"></div>
         <ThemeToggle className="grid place-items-center" />
       </ul>
     </nav>
