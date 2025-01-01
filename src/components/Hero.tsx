@@ -26,11 +26,11 @@ function Hero() {
   return (
     <section
       id="Home"
-      className={`hero min-h-screen overflow-hidden -z-20 ${
+      className={`hero min-h-screen overflow-hidden ${
         Theme === "sunset" ? "motion-bg-in-black" : "motion-bg-in-white"
       } motion-duration-[6s] motion-delay-[5s]`}
     >
-      <div className="hero-content flex-col gap-8 text-center">
+      <div className="hero-content flex-col gap-16 text-center">
         <h1 className="absolute text-9xl opacity-0 motion-opacity-in-100 motion-delay-[3s]/opacity motion-duration-500/opacity motion-preset-slide-down-lg motion-preset-focus-lg motion-duration-[2s]">
           Hi ✌🏻, I&apos;m Luca
         </h1>
@@ -64,6 +64,17 @@ function Hero() {
           >
             Developer
           </div>
+        </div>
+        <div className="relative group px-8 py-6 motion-preset-slide-up-lg motion-preset-focus-lg motion-delay-[4s] motion-duration-[2s]">
+          <div className="absolute transition-all duration-500 ease-in-out -inset-3 opacity-70 bg-gradient-to-r from-primary via-secondary to-accent rounded-xl blur-xl group-hover:opacity-100 group-hover:-inset-4"></div>
+          <a
+            href="#Contact"
+            title="Get in touch!"
+            className="bg-base-100 transition-all duration-500 text-lg px-8 py-6 font-bold rounded-2xl relative group-hover:text-primary"
+            role="button"
+          >
+            Get in touch!
+          </a>
         </div>
       </div>
     </section>

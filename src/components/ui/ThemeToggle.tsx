@@ -1,15 +1,18 @@
 import React from "react";
 import { useTheme } from "./ThemeProvider";
 
-interface Props {
-  classname?: string;
-}
+type ThemeToggleProps = { className?: string };
 
-export const ThemeToggle = (props: Props) => {
+export const ThemeToggle = (props: ThemeToggleProps) => {
   const { Theme, toggleTheme } = useTheme();
   return (
-    <div className={props.classname ? props.classname : ""}>
-      <label className="swap swap-rotate transition duration-300 hover:rotate-45 hover:text-primary">
+    <div>
+      <label
+        className={
+          "swap swap-rotate transition duration-300 hover:rotate-45 hover:text-primary " +
+          props.className
+        }
+      >
         {/* this hidden checkbox controls the state */}
         <input
           type="checkbox"
@@ -22,7 +25,7 @@ export const ThemeToggle = (props: Props) => {
 
         {/* sun icon */}
         <svg
-          className="swap-off h-10 w-10 fill-current"
+          className="swap-off h-9 w-9 fill-current"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
         >
