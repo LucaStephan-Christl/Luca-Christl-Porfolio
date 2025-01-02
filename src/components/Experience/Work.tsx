@@ -5,9 +5,7 @@ function Work() {
     <div className="flex flex-col sm:flex-row justify-center items-center gap-8 motion-preset-slide-left-lg motion-preset-focus-lg">
       <div className="">
         <div className="text-left">
-          <h2 className="text-4xl font-bold max-w-md">
-            Working Student at Trihow AG
-          </h2>
+          <h2 className="text-4xl font-bold max-w-md">Trihow AG</h2>
           <p className="mb-4">(since October 2024)</p>
           <p className="max-w-md">
             Currently I&apos;m working at a startup in Rotkreuz, Switzerland as

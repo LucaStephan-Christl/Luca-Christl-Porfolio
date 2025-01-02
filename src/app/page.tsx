@@ -25,8 +25,8 @@ export default function Home() {
           <div className="container mx-auto lg:px-32 px-8 flex flex-col gap-48">
             <Projects />
             <div className="divider divider-primary" />
+            <About />
           </div>
-          <About />
         </div>
         <Footer />
       </ThemeProvider>
