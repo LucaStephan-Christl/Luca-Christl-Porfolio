@@ -107,7 +107,14 @@ function Navbar() {
                 activeSection === section[0] ? "text-primary" : ""
               } hover:text-primary transition-all`}
             >
-              {<div className="py-2">{section[1]}</div>}
+              {
+                <div
+                  className="tooltip tooltip-right px-1 tooltip-primary"
+                  data-tip={section[0]}
+                >
+                  <div className="py-2">{section[1]}</div>
+                </div>
+              }
               <span
                 className={`absolute left-0 bottom-0 w-full ${
                   activeSection === section[0] ? "scale-100" : "scale-0"

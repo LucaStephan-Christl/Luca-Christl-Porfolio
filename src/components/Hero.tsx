@@ -37,7 +37,10 @@ function Hero() {
         <div className="flex items-center gap-4 motion-translate-y-in-100 motion-duration-[3s] motion-opacity-in-0 motion-delay-[4s] motion-ease-in-out">
           <div className="avatar">
             <div className="w-32 rounded-full border-2 border-base-content shadow-lg">
-              <img src="/images/profilepic.jpg" alt="picture of luca christl" />
+              <img
+                src="/images/profilepic_cartoon.jpg"
+                alt="picture of luca christl"
+              />
             </div>
           </div>
           <div className="text-left">
@@ -47,30 +50,36 @@ function Hero() {
         </div>
         <div className="flex flex-col justify-center items-center">
           <div
-            className={`font-light md:font-extrabold uppercase text-6xl md:text-9xl text-transparent bg-clip-text bg-gradient-to-r ${
+            className={`font-light md:font-extrabold uppercase text-6xl md:text-9xl ${
               Theme === "sunset"
-                ? "from-primary via-secondary to-accent"
+                ? "text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-accent"
                 : "from-primary to-secondary"
             } motion-preset-focus-lg -motion-translate-x-in-50 motion-delay-[3s] motion-duration-[3s] motion-ease-in-out`}
           >
             Frontend
           </div>
           <div
-            className={`font-light md:font-extrabold uppercase text-6xl md:text-9xl text-transparent bg-clip-text bg-gradient-to-r ${
+            className={`font-light md:font-extrabold uppercase text-6xl md:text-9xl ${
               Theme === "sunset"
-                ? "from-primary via-secondary to-accent"
+                ? "text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-accent"
                 : "from-primary to-secondary"
             } motion-preset-focus-lg motion-translate-x-in-50 motion-delay-[3.5s] motion-duration-[3s] motion-ease-in-out`}
           >
             Developer
           </div>
         </div>
-        <div className="relative group px-8 py-6 motion-preset-slide-up-lg motion-preset-focus-lg motion-delay-[4s] motion-duration-[2s]">
-          <div className="absolute transition-all duration-500 ease-in-out -inset-3 opacity-70 bg-gradient-to-r from-primary via-secondary to-accent rounded-xl blur-xl group-hover:opacity-100 group-hover:-inset-4"></div>
+        <div className="relative transition-all ease-in-out group px-8 py-6 motion-preset-slide-up-lg motion-preset-focus-lg motion-delay-[4s] motion-duration-[2s] hover:scale-105">
+          <div
+            className={`absolute transition-all duration-500 ease-in-out -inset-1 opacity-70 bg-gradient-to-r ${
+              Theme === "sunset"
+                ? "from-primary via-secondary to-accent"
+                : "from-primary to-primary"
+            } rounded-xl blur-2xl group-hover:opacity-100 group-hover:-inset-2`}
+          ></div>
           <a
             href="#Contact"
             title="Get in touch!"
-            className="bg-base-100 transition-all duration-500 text-lg px-8 py-6 font-bold rounded-2xl relative group-hover:text-primary"
+            className="bg-primary transition-all duration-500 text-lg px-8 py-6 font-bold rounded-2xl relative text-primary-content group-hover:scale-125"
             role="button"
           >
             Get in touch!
