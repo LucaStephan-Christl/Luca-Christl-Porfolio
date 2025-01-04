@@ -4,6 +4,9 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Luca Christl's Portfolio",
   description: "personal portfolio website for luca christl",
+  icons: {
+    icon: "/favicon.ico", // Path to your favicon
+  },
 };
 
 export default function RootLayout({
