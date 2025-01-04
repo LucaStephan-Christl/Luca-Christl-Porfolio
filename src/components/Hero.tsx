@@ -4,24 +4,24 @@ import { useTheme } from "./ui/ThemeProvider";
 
 function Hero() {
   const { Theme } = useTheme();
-  // const disableScroll = () => {
-  //   document.body.style.overflow = "hidden"; // Disable scrolling
-  // };
+  const disableScroll = () => {
+    document.body.style.overflow = "hidden"; // Disable scrolling
+  };
 
-  // const enableScroll = () => {
-  //   document.body.style.overflow = ""; // Re-enable scrolling
-  // };
+  const enableScroll = () => {
+    document.body.style.overflow = ""; // Re-enable scrolling
+  };
 
-  // const temporarilyDisableScroll = (duration: number) => {
-  //   disableScroll();
-  //   setTimeout(enableScroll, duration);
-  // };
+  const temporarilyDisableScroll = (duration: number) => {
+    disableScroll();
+    setTimeout(enableScroll, duration);
+  };
 
-  // useEffect(() => {
-  //   temporarilyDisableScroll(6000); // Disable scrolling for 3 seconds
+  useEffect(() => {
+    temporarilyDisableScroll(6000); // Disable scrolling for 3 seconds
 
-  //   return enableScroll; // Cleanup to ensure scrolling is enabled when the component unmounts
-  // }, []);
+    return enableScroll; // Cleanup to ensure scrolling is enabled when the component unmounts
+  });
 
   return (
     <section
