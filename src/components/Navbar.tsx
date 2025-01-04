@@ -69,8 +69,8 @@ function Navbar() {
         ></div>
       ) : null}
       <ul
-        className={`md:hidden fixed right-0 h-screen w-1/2 bg-base-200 transition-all duration-500 ease-in-out translate-x-full ${
-          MenuOpen ? "translate-x-1" : ""
+        className={`md:hidden fixed right-0 h-screen w-1/2 bg-base-200 transition-all duration-500 ease-in-out ${
+          MenuOpen ? "" : "translate-x-full"
         } p-10 flex flex-col justify-center gap-10 text-xl text-right z-20`}
       >
         {["Home", "Experience", "About", "Contact"].map((section) => (
