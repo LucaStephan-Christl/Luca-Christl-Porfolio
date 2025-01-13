@@ -11,7 +11,7 @@ export const ThemeProvider = ({
   const [Theme, setTheme] = useState("sunset");
 
   const toggleTheme = () => {
-    const newTheme = Theme === "sunset" ? "cupcake" : "sunset";
+    const newTheme = Theme === "sunset" ? "nord" : "sunset";
     setTheme(newTheme);
     // Store the new theme in localStorage
     if (typeof window !== "undefined") {

@@ -64,7 +64,7 @@ function Projects() {
                 target="_blank"
                 className="btn btn-primary"
               >
-                Check it out
+                Check it out!
               </a>
             </div>
           </div>
@@ -96,7 +96,7 @@ function Projects() {
                 target="_blank"
                 className="btn btn-primary"
               >
-                Github
+                See Github!
               </a>
             </div>
           </div>
