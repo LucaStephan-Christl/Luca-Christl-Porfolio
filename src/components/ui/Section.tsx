@@ -12,10 +12,7 @@ function Section({
   title?: string;
 }>) {
   return (
-    <section
-      id={id}
-      className={`flex flex-col gap-8 intersect-once intersect:motion-preset-focus-lg intersect:motion-preset-slide-down-right-sm motion-duration-[1s] ${className}`}
-    >
+    <section id={id} className={`flex flex-col gap-8 ${className}`}>
       {title ? <h2 className="text-5xl">{title}</h2> : null}
       {children}
     </section>

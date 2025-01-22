@@ -26,7 +26,7 @@ function ImageInspector({
   return (
     <div
       onClick={() => setIsOpen(!isOpen)}
-      className={`${className} cursor-zoom-in hover:scale-150 transition-all hover:z-10`}
+      className={`${className} cursor-zoom-in hover:scale-110 transition-all hover:z-10`}
     >
       {isOpen && ReactDOM.createPortal(modal, document.body)}
       {children}

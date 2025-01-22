@@ -1,6 +1,6 @@
 import React from "react";
-import Section from "./ui/Section";
-import ImageInspector from "./ui/ImageInspector";
+import Section from "../ui/Section";
+import ImageInspector from "../ui/ImageInspector";
 import Link from "next/link";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 
@@ -28,7 +28,11 @@ function About() {
   }
 
   return (
-    <Section title="About Me" id="About">
+    <Section
+      title="About Me"
+      id="About"
+      className="intersect:motion-preset-focus-sm intersect-once intersect:motion-preset-slide-down-right-sm"
+    >
       <div className="mockup-browser border-base-300 bg-base-200 border">
         <div className="mockup-browser-toolbar">
           <div className="input border-base-300 border">
@@ -38,18 +42,16 @@ function About() {
         <div className="border-base-300 justify-center flex flex-col xl:grid xl:grid-cols-3 grid-cols-1 gap-4 border-t xl:px-16 p-4">
           <div className="flex flex-col gap-4 xl:border-l-2 xl:border-neutral xl:pl-5 xl:col-start-3 xl:col-end-4">
             <div className="flex flex-col">
-              <div className="flex justify-between items-center">
+              <a
+                href="https://www.linkedin.com/in/luca-christl-36a783308/"
+                target="_blank"
+                className=" transition-all duration-300 hover:text-primary flex justify-between items-center"
+              >
                 <h3 className="sm:text-4xl md:text-2xl text-2xl font-bold">
                   Luca Stephan Christl
                 </h3>
-                <a
-                  href="https://www.linkedin.com/in/luca-christl-36a783308/"
-                  target="_blank"
-                  className="hover:scale-110 transition-all duration-300 hover:text-primary"
-                >
-                  <IoIosArrowDroprightCircle className="w-6 h-6" />
-                </a>
-              </div>
+                <IoIosArrowDroprightCircle className="w-6 h-6" />
+              </a>
               <p className="sm:text-base opacity-60">
                 Software/Frontend Developer
               </p>
@@ -111,8 +113,8 @@ function About() {
                 Student at the University of Zurich
               </Link>
               <p className="text-sm md:text-base opacity-60">
-                Currently Luca Christl is a 5th semester student majoring in
-                Software Systems. He was born in Straubing, Germany and has been
+                Currently Luca is a 5th semester student majoring in Software
+                Systems. He was born in Straubing, Germany and has been
                 interested in technology all ...
               </p>
             </div>
@@ -122,31 +124,44 @@ function About() {
                 <div className="collapse collapse-arrow join-item bg-base-100 border-base-300 border">
                   <input type="radio" name="my-accordion-4" defaultChecked />
                   <div className="collapse-title text-xl font-medium">
-                    What Sports does Luca play ?
+                    What sports does Luca play ?
                   </div>
                   <div className="collapse-content">
                     <p>
                       Luca&apos;s been going to the gym for the past few years
-                      and recently joined a volleyball club.
+                      and recently joined a volleyball club. Also in winter he
+                      is a huge fan if snowboarding.
                     </p>
                   </div>
                 </div>
                 <div className="collapse collapse-arrow join-item bg-base-100 border-base-300 border">
                   <input type="radio" name="my-accordion-4" />
                   <div className="collapse-title text-xl font-medium">
-                    Click to open this one and close others
+                    How did he get into Computer Science ?
                   </div>
                   <div className="collapse-content">
-                    <p>hello</p>
+                    <p>
+                      Luca&apos;s interest in computers and technology was
+                      sparked early in his life when his dad brought home his
+                      first computer when he was about 6. He started playing
+                      videogames alot and thus has always been around
+                      technology. Also his older brother and father both work in
+                      the IT industry.
+                    </p>
                   </div>
                 </div>
                 <div className="collapse collapse-arrow join-item bg-base-100 border-base-300 border">
                   <input type="radio" name="my-accordion-4" />
                   <div className="collapse-title text-xl font-medium">
-                    Click to open this one and close others
+                    What&apos;s his favourite show?
                   </div>
                   <div className="collapse-content">
-                    <p>hello</p>
+                    <p>
+                      His faviourite show is &quot;How I met your Mother&quot;,
+                      since in his opinion it finds the perfect balance between
+                      funny and serious moments and presents characters with a
+                      lot of development and depth.
+                    </p>
                   </div>
                 </div>
               </div>
