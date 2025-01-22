@@ -5,7 +5,7 @@ import { useTheme } from "../ui/ThemeProvider";
 function Work() {
   const { Theme } = useTheme();
   return (
-    <div className="flex flex-col md:flex-row justify-between items-center motion-preset-slide-left-lg motion-preset-focus-lg">
+    <div className="grid lg:grid-cols-2 place-items-center motion-preset-slide-left-lg motion-preset-focus-lg">
       <div className="">
         <div className="text-left">
           <a
@@ -29,14 +29,12 @@ function Work() {
           src="https://lottie.host/cc6f0a4e-5115-43d6-b3c0-dc6eb725ab80/19acOEo0z0.lottie"
           loop
           autoplay
-          className="max-w-xl"
         />
       ) : (
         <DotLottieReact
           src="https://lottie.host/777cade0-c8b9-4292-9cef-fd567931c2b8/HoRwiTurJy.lottie"
           loop
           autoplay
-          className="max-w-xl"
         />
       )}
     </div>
