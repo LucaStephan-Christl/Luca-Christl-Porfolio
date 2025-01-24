@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { useTheme } from "./ui/ThemeProvider";
+import Image from "next/image";
 
 function Hero() {
   const { Theme } = useTheme();
@@ -10,7 +11,7 @@ function Hero() {
       id="Home"
       className={`hero min-h-screen overflow-hidden ${
         Theme === "sunset" ? "motion-bg-in-black" : "motion-bg-in-white"
-      } motion-duration-[6s] motion-delay-[5s]`}
+      } motion-duration-[3s] motion-delay-[5s]`}
     >
       <div className="hero-content flex-col gap-16 text-center">
         <h1 className="absolute text-9xl opacity-0 motion-opacity-in-100 motion-delay-[3s]/opacity motion-duration-500/opacity motion-preset-slide-down-lg motion-preset-focus-lg motion-duration-[2s]">
@@ -18,10 +19,13 @@ function Hero() {
         </h1>
         <div className="flex items-center gap-4 motion-translate-y-in-100 motion-duration-[3s] motion-opacity-in-0 motion-delay-[4s] motion-ease-in-out">
           <div className="avatar">
-            <div className="w-32 rounded-full border-2 border-base-content shadow-lg">
-              <img
+            <div className="w-32 rounded-full border-2 border-base-content shadow-l relative">
+              <Image
                 src="/images/profilepic_cartoon.jpg"
                 alt="picture of luca christl"
+                layout="fill"
+                priority
+                objectFit="cover"
               />
             </div>
           </div>

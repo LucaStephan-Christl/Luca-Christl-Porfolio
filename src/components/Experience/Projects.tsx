@@ -3,9 +3,9 @@ import Section from "../ui/Section";
 
 function Projects() {
   return (
-    <Section title="Projects" id="Experience">
+    <Section title="Featured Projects" id="Experience">
       <div className="grid gap-8 opacity-0 xl:grid-cols-3 lg:grid-cols-2 intersect-once intersect:motion-opacity-out-100">
-        <div className="card xl:col-span-2 bg-base-200 shadow-xl intersect-once motion-duration-[1s] motion-ease-in-out intersect:-motion-translate-x-in-75 intersect:motion-preset-focus-md">
+        <div className="card xl:col-span-2 bg-base-200 shadow-xl intersect-once motion-duration-[1s] motion-ease-in-out intersect:-motion-translate-x-in-25 intersect:motion-preset-focus-sm">
           <figure className="bg-[#FFEAEA]">
             <img
               className="xl:h-60"
@@ -36,7 +36,7 @@ function Projects() {
             </div>
           </div>
         </div>
-        <div className="card bg-base-200 shadow-xl intersect-once motion-delay-[0.2s] motion-duration-[1s] motion-ease-in-out intersect:motion-translate-x-in-75 intersect:motion-preset-focus-md">
+        <div className="card bg-base-200 shadow-xl intersect-once motion-delay-[0.2s] motion-duration-[1s] motion-ease-in-out intersect:motion-translate-x-in-25 intersect:motion-preset-focus-sm">
           <figure>
             <img
               className="h-full"
@@ -69,7 +69,7 @@ function Projects() {
             </div>
           </div>
         </div>
-        <div className="card lg:card-side bg-base-200 shadow-xl xl:col-span-3 lg:col-span-2 motion-delay-[0.1s] intersect-once motion-duration-[1s] motion-ease-in-out intersect:-motion-translate-x-in-75 intersect:motion-preset-focus-md">
+        <div className="card lg:card-side bg-base-200 shadow-xl xl:col-span-3 lg:col-span-2 motion-delay-[0.1s] intersect-once motion-duration-[1s] motion-ease-in-out intersect:-motion-translate-x-in-25 intersect:motion-preset-focus-sm">
           <figure className="">
             <img
               className="h-full"

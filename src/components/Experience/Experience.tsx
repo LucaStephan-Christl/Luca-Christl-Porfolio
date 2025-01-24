@@ -8,15 +8,11 @@ function Experience() {
   const [showEducation, setShowEducation] = useState(false);
   return (
     <Section
-      title="Experience"
       id="Experience"
       className="intersect:motion-preset-focus-sm intersect-once intersect:motion-preset-slide-down-right-sm"
     >
-      <div className="border rounded-xl border-white border-opacity-15 shadow-xl backdrop-blur-xl p-2 overflow-hidden">
-        <div
-          role="tablist"
-          className="tabs tabs-boxed bg-opacity-0 border-b rounded-none pb-3 border-white border-opacity-15 grid grid-cols-2"
-        >
+      <div className="backdrop-blur-xl p-2 overflow-hidden">
+        <div role="tablist" className="tabs tabs-boxed grid grid-cols-2">
           <button
             role="tab"
             className={`tab ${

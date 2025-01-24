@@ -2,7 +2,7 @@ import React from "react";
 
 function Education() {
   return (
-    <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical motion-preset-slide-right-lg motion-preset-focus-lg">
+    <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical motion-preset-slide-right-sm motion-preset-focus-sm">
       <li>
         <div className="timeline-middle">
           <svg

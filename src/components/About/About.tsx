@@ -3,6 +3,7 @@ import Section from "../ui/Section";
 import ImageInspector from "../ui/ImageInspector";
 import Link from "next/link";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
+import Image from "next/image";
 
 function About() {
   function calculateAge(): number {
@@ -28,11 +29,7 @@ function About() {
   }
 
   return (
-    <Section
-      title="About Me"
-      id="About"
-      className="intersect:motion-preset-focus-sm intersect-once intersect:motion-preset-slide-down-right-sm"
-    >
+    <Section title="About Me" id="About" className="">
       <div className="mockup-browser border-base-300 bg-base-200 border">
         <div className="mockup-browser-toolbar">
           <div className="input border-base-300 border">
@@ -61,22 +58,34 @@ function About() {
                 className="col-span-2 row-span-2"
                 pathname="/images/photo1.jpeg"
               >
-                <img
+                <Image
                   className="aspect-square object-cover"
                   src="/images/photo1.jpeg"
-                ></img>
+                  alt="picture of Luca Christl"
+                  height={1000}
+                  width={1000}
+                  priority
+                ></Image>
               </ImageInspector>
               <ImageInspector pathname="/images/profilepic.jpg">
-                <img
+                <Image
                   className="aspect-square object-cover"
                   src="/images/profilepic.jpg"
-                ></img>
+                  alt="picture of Luca Christl"
+                  height={1000}
+                  width={1000}
+                  priority
+                ></Image>
               </ImageInspector>
               <ImageInspector pathname="/images/snowboard.jpeg">
-                <img
+                <Image
                   className="aspect-square object-cover"
                   src="/images/snowboard.jpeg"
-                ></img>
+                  alt="picture of Luca Christl"
+                  height={1000}
+                  width={1000}
+                  priority
+                ></Image>
               </ImageInspector>
             </div>
             <ul className="grid grid-cols-2 gap-2">
