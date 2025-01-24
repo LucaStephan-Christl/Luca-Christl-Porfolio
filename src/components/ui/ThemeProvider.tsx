@@ -9,6 +9,7 @@ export const ThemeProvider = ({
   children: React.ReactNode;
 }>) => {
   const [Theme, setTheme] = useState("sunset");
+  const [loading, setLoading] = useState(true);
 
   const toggleTheme = () => {
     const newTheme = Theme === "sunset" ? "nord" : "sunset";
@@ -18,12 +19,14 @@ export const ThemeProvider = ({
       localStorage.setItem("theme", newTheme);
     }
   };
+
   useEffect(() => {
     // Access localStorage only on the client side
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme) {
       setTheme(savedTheme);
     }
+    setLoading(false); // Mark as loaded
   }, []);
 
   useEffect(() => {
@@ -31,6 +34,11 @@ export const ThemeProvider = ({
       document.documentElement.setAttribute("data-theme", Theme);
     }
   }, [Theme]);
+
+  // Render children only when the loading is complete
+  if (loading) {
+    return null; // Or a loading spinner/placeholder if needed
+  }
 
   return (
     <ThemeContext.Provider value={{ Theme, toggleTheme }}>
