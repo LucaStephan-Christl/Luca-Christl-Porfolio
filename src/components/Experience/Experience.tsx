@@ -38,7 +38,7 @@ function Experience() {
             Education
           </button>
         </div>
-        <div className="flex flex-col gap-16 p-8">
+        <div className="px-4 py-8 sm:px-0">
           {showEducation ? <Education /> : <Work />}
         </div>
       </div>

@@ -91,7 +91,7 @@ function About() {
             <ul className="grid grid-cols-2 gap-2">
               <li key="description" className="stats shadow col-span-2">
                 <div className="stat">
-                  <div className="text-sm">
+                  <div className="text-sm text-justify">
                     Luca Stephan Christl is a Student and Software Developer,
                     who loves learning new things in all aspects of life and
                     being creative.

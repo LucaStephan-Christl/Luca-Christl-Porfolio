@@ -19,7 +19,7 @@ function Projects() {
               <div className="badge badge-secondary">Sqaurespace</div>
               <div className="badge badge-error">Figma</div>
             </div>
-            <p className="">
+            <p className="text-justify">
               I developed and created a Homepage for a Beauty-Business. Using
               Figma to create a new Corporate Design, I worked together closely
               with the client to directly incorporate feedback and implemented
@@ -52,7 +52,7 @@ function Projects() {
 
               <div className="badge badge-error">Figma</div>
             </div>
-            <p>
+            <p className="text-justify">
               Together with 3 other Students, I developed a online Scrabble
               game, that you can play with your friends. The game works in
               realtime with a lobby system and profiles where you can add your
@@ -84,7 +84,7 @@ function Projects() {
               <div className="badge badge-warning">Tailwind CSS</div>
               <div className="badge badge-error">Figma</div>
             </div>
-            <p className="max-w-4xl">
+            <p className="max-w-4xl text-justify">
               This is the Site your currently viewing. I wanted to create a
               personal Portfolio website using Next.js, to collect my
               experiences and projects. Also I want to give some further
