@@ -7,51 +7,40 @@ function Contact() {
   const [isLoading, setIsLoading] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const onSubmit = (event) => {
-    if (isLoading) {
-      return;
-    }
+  const onSubmit = async (event: {
+    preventDefault: () => void;
+    target: HTMLFormElement | undefined;
+  }) => {
+    if (isLoading) return;
     event.preventDefault();
+
     setIsLoading(true);
     setResult(null);
-    setIsSubmitted(false);
-    setTimeout(() => {
-      setIsLoading(false);
+
+    const formData = new FormData(event.target);
+    formData.append("access_key", "297485d8-064a-4cc8-a071-0f75bb8a56d0");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
+
+    const data = await response.json();
+    setIsLoading(false);
+
+    if (data.success) {
       setResult("Thank you! Your message has been sent.");
       setIsSubmitted(true);
-    }, 3000);
+      setTimeout(() => {
+        setIsSubmitted(false);
+        setResult(null);
+        setIsLoading(false);
+        event.target.reset();
+      }, 10000);
+    } else {
+      setResult(data.message);
+    }
   };
-  // const onSubmit = async (event) => {
-  // if (isLoading) return;
-  //   event.preventDefault();
-
-  //   setIsLoading(true);
-  //   setResult(null);
-
-  //   const formData = new FormData(event.target);
-  //   formData.append("access_key", "297485d8-064a-4cc8-a071-0f75bb8a56d0");
-
-  //   const response = await fetch("https://api.web3forms.com/submit", {
-  //     method: "POST",
-  //     body: formData,
-  //   });
-
-  //   const data = await response.json();
-  //   setIsLoading(false);
-
-  //   if (data.success) {
-  //     setResult("Thank you! Your message has been sent.");
-  //     setIsSubmitted(true);
-  //     setTimeout(() => {
-  //       setIsSubmitted(false);
-  //       setResult(null);
-  //       setIsLoading(false);
-  //       event.target.reset();
-  //     }, 10000);
-  //   } else {
-  //     setResult(data.message);
-  //   }
-  // };
 
   return (
     <Section
