@@ -59,7 +59,7 @@ function Contact() {
       className="flex flex-col justify-center items-center gap-8"
     >
       <div className="flex flex-col md:flex-row shadow-xl backdrop-blur-lg border border-base-content border-opacity-10 rounded-md overflow-hidden">
-        <div className="flex flex-col items-center text-center lg:p-16 p-8 gap-8">
+        <div className="flex flex-col items-center lg:p-16 p-8 gap-8 max-w-md text-center">
           <h4 className="text-2xl font-semibold">Contact Information</h4>
           <div className="flex flex-col gap-2">
             <p>Luca Christl</p>
@@ -67,6 +67,10 @@ function Contact() {
             <p>078 961 21 98</p>
             <p>Aettenschwil, Switzerland</p>
           </div>
+          <p>
+            Please refrain of using my information for advertisement or charges
+            will be pressed.
+          </p>
         </div>
         {isSubmitted ? (
           <div className="flex flex-col flex-grow-1 justify-center items-center p-8 bg-primary text-primary-content">
@@ -103,7 +107,7 @@ function Contact() {
                 <input
                   name="email"
                   type="email"
-                  className="input validator grow"
+                  className="grow"
                   placeholder="Email"
                   required
                 />
@@ -120,10 +124,10 @@ function Contact() {
               className="btn btn-md w-fit"
               disabled={isLoading}
             >
+              {isLoading ? "Sending..." : "Submit"}{" "}
               {isLoading && (
                 <span className="loading loading-spinner inline-block"></span>
               )}
-              {isLoading ? "Sending..." : "Submit"}
             </button>
           </form>
         )}

@@ -20,13 +20,7 @@ function ImageInspector({
     <div className="fixed cursor-zoom-out top-0 left-0 w-screen h-screen z-50 bg-black grid place-items-center bg-opacity-50">
       {isLoading && (
         <div className="absolute z-50">
-          <DotLottieReact
-            src="https://lottie.host/f89e5320-876d-43dc-8abd-617b16a5392f/LnbZNE6LXN.lottie"
-            loop
-            autoplay
-            width={"100px"}
-            height={"100px"}
-          />
+          <span className="loading loading-dots loading-xl"></span>
         </div>
       )}
       <Image

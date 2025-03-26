@@ -2,6 +2,7 @@
 import React from "react";
 import { useTheme } from "./ui/ThemeProvider";
 import Image from "next/image";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
 function Hero() {
   const { Theme } = useTheme();
@@ -14,10 +15,15 @@ function Hero() {
       } motion-duration-[3s] motion-delay-[5s]`}
     >
       <div className="hero-content flex-col gap-16 text-center">
-        <h1 className="absolute text-9xl opacity-0 motion-opacity-in-100 motion-delay-[3s]/opacity motion-duration-500/opacity motion-preset-slide-down-lg motion-preset-focus-lg motion-duration-[2s]">
-          Hi ✌🏻, I&apos;m Luca
+        <DotLottieReact
+          className="absolute md:-translate-y-24 -translate-y-12 opacity-0 motion-opacity-in-100 motion-delay-[5s]/opacity motion-duration-500/opacity motion-preset-slide-down-lg motion-preset-focus-lg motion-duration-[2s]"
+          src="https://lottie.host/ce24d938-9774-450f-98fa-ce4b7bc03bcb/y5RE9ltPea.lottie"
+          autoplay
+        />
+        <h1 className="absolute md:translate-y-24 translate-y-12 text-4xl md:text-9xl opacity-0 motion-opacity-in-100 motion-delay-[5s]/opacity motion-duration-500/opacity motion-preset-slide-down-lg motion-preset-focus-lg motion-duration-[2s]">
+          Hi,✌🏻 I&apos;m Luca
         </h1>
-        <div className="flex items-center gap-4 motion-translate-y-in-100 motion-duration-[3s] motion-opacity-in-0 motion-delay-[4s] motion-ease-in-out">
+        <div className="flex items-center gap-4 motion-translate-y-in-100 motion-duration-[3s] motion-opacity-in-0 motion-delay-[6s] motion-ease-in-out">
           <div className="avatar">
             <div className="w-32 rounded-full border-2 border-base-content shadow-l relative">
               <Image
@@ -40,7 +46,7 @@ function Hero() {
               Theme === "sunset"
                 ? "text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-accent"
                 : "from-primary to-secondary"
-            } motion-preset-focus-lg -motion-translate-x-in-50 motion-delay-[3s] motion-duration-[3s] motion-ease-in-out`}
+            } motion-preset-focus-lg -motion-translate-x-in-50 motion-delay-[6s] motion-duration-[3s] motion-ease-in-out`}
           >
             Frontend
           </div>
@@ -49,12 +55,12 @@ function Hero() {
               Theme === "sunset"
                 ? "text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-accent"
                 : "from-primary to-secondary"
-            } motion-preset-focus-lg motion-translate-x-in-50 motion-delay-[3.5s] motion-duration-[3s] motion-ease-in-out`}
+            } motion-preset-focus-lg motion-translate-x-in-50 motion-delay-[6.5s] motion-duration-[3s] motion-ease-in-out`}
           >
             Developer
           </div>
         </div>
-        <div className="relative transition-all ease-in-out group px-8 py-6 motion-preset-slide-up-lg motion-preset-focus-lg motion-delay-[4s] motion-duration-[2s] hover:scale-105">
+        <div className="relative transition-all ease-in-out group px-8 py-6 motion-preset-slide-up-lg motion-preset-focus-lg motion-delay-[6s] motion-duration-[2s] hover:scale-105">
           <div
             className={`absolute transition-all duration-500 ease-in-out -inset-1 opacity-70 bg-gradient-to-r ${
               Theme === "sunset"
