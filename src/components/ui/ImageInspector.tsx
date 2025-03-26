@@ -1,5 +1,4 @@
 "use client";
-import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import Image from "next/image";
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
