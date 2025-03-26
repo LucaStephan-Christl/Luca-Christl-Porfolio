@@ -7,17 +7,14 @@ function Contact() {
   const [isLoading, setIsLoading] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const onSubmit = async (event: {
-    preventDefault: () => void;
-    target: HTMLFormElement | undefined;
-  }) => {
+  const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     if (isLoading) return;
     event.preventDefault();
 
     setIsLoading(true);
     setResult(null);
 
-    const formData = new FormData(event.target);
+    const formData = new FormData(event.target as HTMLFormElement);
     formData.append("access_key", "297485d8-064a-4cc8-a071-0f75bb8a56d0");
 
     const response = await fetch("https://api.web3forms.com/submit", {
@@ -35,7 +32,7 @@ function Contact() {
         setIsSubmitted(false);
         setResult(null);
         setIsLoading(false);
-        event.target.reset();
+        (event.target as HTMLFormElement).reset();
       }, 10000);
     } else {
       setResult(data.message);
