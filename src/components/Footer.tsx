@@ -3,7 +3,8 @@ import { FaInstagram, FaGithub, FaLinkedinIn } from "react-icons/fa";
 
 function Footer() {
   return (
-    <footer className="footer footer-center bg-base-200 text-base-content rounded p-10 mt-16">
+    <footer className="footer footer-center bg-base-300 text-base-content rounded p-10 relative">
+      <div className="absolute w-screen bg-base-300 h-56 top-0 -translate-y-32 -z-10"></div>
       <nav className="grid grid-flow-col gap-4">
         <a href="#Home" className="link link-hover">
           Home

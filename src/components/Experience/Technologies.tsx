@@ -1,7 +1,7 @@
 import React from "react";
 
 const techs = (
-  <ul className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll group-hover:pause-animation">
+  <ul className="flex items-center justify-center md:justify-start sm:[&_li]:mx-8 [&_li]:mx-0 sm:[&_li]:scale-100 [&_li]:scale-75 [&_img]:max-w-none animate-infinite-scroll group-hover:pause-animation">
     <li className="mask mask-hexagon flex flex-col gap-2 bg-base-100 p-10">
       <img src="/logos/java-4.svg" alt="Java" />
       <p>Java</p>
@@ -18,7 +18,7 @@ const techs = (
       <img src="/logos/spring-boot-1.svg" alt="Springboot" />
       <p>Springboot</p>
     </li>
-    <li className="mask mask-hexagon flex flex-col gap-2 bg-base-100 p-10">
+    <li className="mask  mask-hexagon flex flex-col gap-2 bg-base-100 p-10">
       <svg
         fill="currentColor"
         height="96"
@@ -50,7 +50,7 @@ const techs = (
 function Technologies() {
   return (
     <section
-      id="Experience"
+      id="Technologies"
       className="bg-base-200 p-6 shadow-xl rounded-lg w-full"
     >
       <div className="group w-full inline-flex flex-nowrap overflow-hidden lg:[mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)] text-center">

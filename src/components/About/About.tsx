@@ -6,28 +6,6 @@ import { IoIosArrowDroprightCircle } from "react-icons/io";
 import Image from "next/image";
 
 function About() {
-  function calculateAge(): number {
-    const birthDate = new Date(2001, 9, 30);
-    const today = new Date();
-    const currentYear = today.getFullYear();
-    const birthYear = birthDate.getFullYear();
-
-    // Calculate preliminary age
-    let age = currentYear - birthYear;
-
-    // Adjust if the birthday hasn't occurred yet this year
-    const hasBirthdayOccurred =
-      today.getMonth() > birthDate.getMonth() ||
-      (today.getMonth() === birthDate.getMonth() &&
-        today.getDate() >= birthDate.getDate());
-
-    if (!hasBirthdayOccurred) {
-      age--;
-    }
-
-    return age;
-  }
-
   return (
     <Section title="About Me" id="About" className="">
       <div className="mockup-browser border-base-300 bg-base-200 border">
@@ -39,16 +17,21 @@ function About() {
         <div className="border-base-300 justify-center flex flex-col xl:grid xl:grid-cols-3 grid-cols-1 gap-4 border-t xl:px-16 p-4">
           <div className="flex flex-col gap-4 xl:border-l-2 xl:border-neutral xl:pl-5 xl:col-start-3 xl:col-end-4">
             <div className="flex flex-col">
-              <a
-                href="https://www.linkedin.com/in/luca-christl-36a783308/"
-                target="_blank"
-                className=" transition-all duration-300 hover:text-primary flex justify-between items-center"
+              <div
+                className="tooltip tooltip-top px-1 tooltip-primary"
+                data-tip="Checkout Linked-In"
               >
-                <h3 className="sm:text-4xl md:text-2xl text-2xl font-bold">
-                  Luca Stephan Christl
-                </h3>
-                <IoIosArrowDroprightCircle className="w-6 h-6" />
-              </a>
+                <a
+                  href="https://www.linkedin.com/in/luca-christl-36a783308/"
+                  target="_blank"
+                  className="transition-all duration-300 hover:text-primary flex justify-between items-center"
+                >
+                  <h3 className="sm:text-4xl md:text-2xl text-2xl font-bold">
+                    Luca Stephan Christl
+                  </h3>
+                  <IoIosArrowDroprightCircle className="w-6 h-6" />
+                </a>
+              </div>
               <p className="sm:text-base opacity-60">
                 Software/Frontend Developer
               </p>
@@ -98,15 +81,19 @@ function About() {
                   </div>
                 </div>
               </li>
-              <li key="age" className="stats shadow">
+              <li key="born" className="stats shadow">
                 <div className="stat">
-                  <div className="text-sm">Age</div>
-                  <div className="font-bold text-base">
-                    {`${calculateAge()} years`}
-                  </div>
+                  <div className="text-sm">Born</div>
+                  <div className="font-bold text-base">{`09.2001`}</div>
                 </div>
               </li>
-              <li key="interests" className="stats shadow">
+              <li key="died" className="stats shadow">
+                <div className="stat">
+                  <div className="text-sm">Languages</div>
+                  <div className="font-bold text-base">German, English</div>
+                </div>
+              </li>
+              <li key="interests" className="stats shadow col-span-2">
                 <div className="stat">
                   <div className="text-sm">Interests</div>
                   <div className="font-bold text-base">
@@ -192,6 +179,17 @@ function About() {
               <p className="text-sm md:text-base opacity-60">
                 The best ways to combine creative thinking with problem solving
                 skills and technology
+              </p>
+            </div>
+            <div className="flex flex-col gap-2">
+              <Link href="#" className="link link-hover text-xl font-bold">
+                Goals
+              </Link>
+              <p className="text-sm md:text-base opacity-60">
+                There are many things Luca still wants to do in his life
+                regarding career but also personal development and experiences.
+                One of his biggest dreams is to travel to Japan for some time
+                and work remotely...
               </p>
             </div>
           </div>

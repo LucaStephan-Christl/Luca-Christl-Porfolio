@@ -8,6 +8,7 @@ import ObserverProvider from "@/components/ui/ObserverProvider";
 import Background from "@/components/ui/Background";
 import About from "@/components/About/About";
 import Navbar from "@/components/Navbar";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
@@ -22,13 +23,17 @@ export default function Home() {
             <Experience />
           </div>
           <Technologies />
-          <div className="container mx-auto lg:px-32 px-8 flex flex-col gap-48">
+          <div className="container mx-auto xl:px-0 px-8 flex flex-col gap-96">
             <Projects />
-            <div className="divider divider-primary" />
             <About />
           </div>
+          <div>
+            <div className="container mx-auto xl:px-0 px-8 flex flex-col gap-96">
+              <Contact />
+            </div>
+            <Footer />
+          </div>
         </div>
-        <Footer />
       </ThemeProvider>
     </ObserverProvider>
   );

@@ -31,12 +31,14 @@ function Work() {
             </div>
           </div>
           <p className="mb-4">(since October 2024)</p>
-          <p className="max-w-md lg:max-w-xl text-justify">
+          <p className="max-w-md lg:max-w-xl md:text-start text-justify">
             I&apos;m currently working at a startup in Rotkreuz, Switzerland as
-            a Working Student in Software Development. We&apos;re using React.js
-            and Electron.js to develop and maintain a Desktop and Web-App CMS
-            that helps users manage their Products. For more information check
-            out our{" "}
+            a Working Student in Software Development. Trihow specializes in
+            creating interactive solutions that merge physical elements with
+            digital content to enhance customer experiences. We&apos;re using
+            React.js and Electron.js to develop and maintain a Desktop and
+            Web-App CMS that helps clients manage content for their products.
+            For more information check out our{" "}
             <a className="link" href="https://www.trihow.com/" target="_blank">
               website
             </a>
@@ -44,19 +46,16 @@ function Work() {
           </p>
         </div>
       </div>
-      {Theme === "sunset" ? (
-        <DotLottieReact
-          src="https://lottie.host/cc6f0a4e-5115-43d6-b3c0-dc6eb725ab80/19acOEo0z0.lottie"
-          loop
-          autoplay
-        />
-      ) : (
-        <DotLottieReact
-          src="https://lottie.host/777cade0-c8b9-4292-9cef-fd567931c2b8/HoRwiTurJy.lottie"
-          loop
-          autoplay
-        />
-      )}
+      <DotLottieReact
+        key={Theme}
+        src={
+          Theme === "sunset"
+            ? "https://lottie.host/cc6f0a4e-5115-43d6-b3c0-dc6eb725ab80/19acOEo0z0.lottie"
+            : "https://lottie.host/777cade0-c8b9-4292-9cef-fd567931c2b8/HoRwiTurJy.lottie"
+        }
+        loop
+        autoplay
+      />
     </div>
   );
 }
