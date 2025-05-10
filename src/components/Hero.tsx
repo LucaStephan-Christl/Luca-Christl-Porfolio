@@ -10,29 +10,36 @@ function Hero() {
   return (
     <section
       id="Home"
-      className={`hero min-h-screen overflow-hidden ${
+      className={`hero min-h-dvh overflow-hidden ${
         Theme === "sunset" ? "motion-bg-in-black" : "motion-bg-in-white"
       } motion-duration-[3s] motion-delay-[5s]`}
     >
-      <div className="hero-content flex-col gap-16 text-center">
+      <div className="hero-content flex-col gap-16 text-center motion-grayscale-in motion-delay-[2s] motion-duration-[2s]">
         <DotLottieReact
-          className="absolute md:-translate-y-24 -translate-y-12 opacity-0 motion-opacity-in-100 motion-delay-[5s]/opacity motion-duration-500/opacity motion-preset-slide-down-lg motion-preset-focus-lg motion-duration-[2s]"
+          className="absolute h-64 md:-translate-y-24 -translate-y-16 opacity-0 motion-opacity-in-100 motion-delay-[5s]/opacity motion-duration-500/opacity motion-preset-slide-down-lg motion-preset-focus-lg motion-duration-[2s]"
           src="https://lottie.host/ce24d938-9774-450f-98fa-ce4b7bc03bcb/y5RE9ltPea.lottie"
           autoplay
         />
-        <h1 className="absolute md:translate-y-24 translate-y-12 text-4xl md:text-9xl opacity-0 motion-opacity-in-100 motion-delay-[5s]/opacity motion-duration-500/opacity motion-preset-slide-down-lg motion-preset-focus-lg motion-duration-[2s]">
+        <h1 className="absolute md:translate-y-24 translate-y-16 text-5xl md:text-9xl opacity-0 motion-opacity-in-100 motion-delay-[5s]/opacity motion-duration-500/opacity motion-preset-slide-down-lg motion-preset-focus-lg motion-duration-[2s]">
           Hi,✌🏻 I&apos;m Luca
         </h1>
         <div className="flex items-center gap-4 motion-translate-y-in-100 motion-duration-[3s] motion-opacity-in-0 motion-delay-[6s] motion-ease-in-out">
-          <div className="avatar">
-            <div className="w-32 rounded-full border-2 border-base-content shadow-l relative">
-              <Image
-                src="/images/profilepic_cartoon.jpg"
-                alt="picture of luca christl"
-                layout="fill"
-                priority
-                objectFit="cover"
-              />
+          <div className="relative">
+            <div className="avatar">
+              <div className="w-32 rounded-full border-2 border-base-content shadow-l relative">
+                <Image
+                  src="/images/profilepic_cartoon.jpg"
+                  alt="picture of luca christl"
+                  layout="fill"
+                  priority
+                  objectFit="cover"
+                />
+              </div>
+            </div>
+            <div className="chat chat-end absolute top-0 left-0 -translate-x-full -translate-y-2/3 motion-preset-blur-left-md motion-preset-bounce motion-delay-[9s]">
+              <div className="chat-bubble w-48 motion-preset-typewriter ">
+                Hi ✌🏻, this website is a work in progress. Have fun browsing!
+              </div>
             </div>
           </div>
           <div className="text-left">

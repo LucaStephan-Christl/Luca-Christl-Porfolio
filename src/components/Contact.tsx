@@ -58,65 +58,59 @@ function Contact() {
             will be pressed.
           </p>
         </div>
-        {isSubmitted ? (
-          <div className="flex flex-col flex-grow-1 justify-center items-center p-8 bg-primary text-primary-content">
-            <h4 className="text-2xl font-semibold">{result}</h4>
-          </div>
-        ) : (
-          <form
-            onSubmit={onSubmit}
-            className={`flex flex-grow-1 flex-col gap-8 col-span-2 lg:p-16 p-8 bg-primary text-center md:text-left`}
-          >
-            <h4 className="text-2xl text-primary-content font-semibold">
-              Send Me a Message
-            </h4>
-            <div className="grid grid-cols-2 gap-3">
-              <label className="input flex items-center gap-2">
-                <input
-                  name="firstName"
-                  type="text"
-                  className="grow"
-                  placeholder="First Name"
-                  required
-                />
-              </label>
-              <label className="input flex items-center gap-2">
-                <input
-                  name="lastName"
-                  type="text"
-                  className="grow"
-                  placeholder="Last Name"
-                  required
-                />
-              </label>
-              <label className="input flex items-center gap-2 col-span-2">
-                <input
-                  name="email"
-                  type="email"
-                  className="grow"
-                  placeholder="Email"
-                  required
-                />
-              </label>
-              <textarea
-                name="message"
-                className="textarea col-span-2"
-                placeholder="Type your message here"
+        <form
+          onSubmit={onSubmit}
+          className={`flex flex-grow-1 flex-col gap-8 col-span-2 lg:p-16 p-8 bg-primary text-center md:text-left`}
+        >
+          <h4 className="text-2xl text-primary-content font-semibold">
+            Send Me a Message
+          </h4>
+          <div className="grid grid-cols-2 gap-3">
+            <label className="input flex items-center gap-2">
+              <input
+                name="firstName"
+                type="text"
+                className="grow"
+                placeholder="First Name"
                 required
-              ></textarea>
-            </div>
-            <button
-              type="submit"
-              className="btn btn-md w-fit"
-              disabled={isLoading}
-            >
-              {isLoading ? "Sending..." : "Submit"}{" "}
-              {isLoading && (
-                <span className="loading loading-spinner inline-block"></span>
-              )}
-            </button>
-          </form>
-        )}
+              />
+            </label>
+            <label className="input flex items-center gap-2">
+              <input
+                name="lastName"
+                type="text"
+                className="grow"
+                placeholder="Last Name"
+                required
+              />
+            </label>
+            <label className="input flex items-center gap-2 col-span-2">
+              <input
+                name="email"
+                type="email"
+                className="grow"
+                placeholder="Email"
+                required
+              />
+            </label>
+            <textarea
+              name="message"
+              className="textarea col-span-2"
+              placeholder="Type your message here"
+              required
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            className="btn btn-md w-fit"
+            disabled={isLoading}
+          >
+            {isLoading ? "Sending..." : "Submit"}{" "}
+            {isLoading && (
+              <span className="loading loading-spinner inline-block"></span>
+            )}
+          </button>
+        </form>
       </div>
     </Section>
   );
