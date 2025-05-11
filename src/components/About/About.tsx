@@ -17,21 +17,22 @@ function About() {
         <div className="border-base-300 justify-center flex flex-col xl:grid xl:grid-cols-3 grid-cols-1 gap-4 border-t xl:px-16 p-4">
           <div className="flex flex-col gap-4 xl:border-l-2 xl:border-neutral xl:pl-5 xl:col-start-3 xl:col-end-4">
             <div className="flex flex-col">
-              <div
-                className="tooltip tooltip-top px-1 tooltip-primary"
-                data-tip="Checkout Linked-In"
+              <a
+                href="https://www.linkedin.com/in/luca-christl-36a783308/"
+                target="_blank"
+                className="transition-all duration-300 hover:text-primary flex justify-between items-center"
               >
-                <a
-                  href="https://www.linkedin.com/in/luca-christl-36a783308/"
-                  target="_blank"
-                  className="transition-all duration-300 hover:text-primary flex justify-between items-center"
+                <div
+                  className="tooltip tooltip-top px-1 tooltip-primary"
+                  data-tip="Checkout Linked-In"
                 >
                   <h3 className="sm:text-4xl md:text-2xl text-2xl font-bold">
                     Luca Stephan Christl
                   </h3>
-                  <IoIosArrowDroprightCircle className="w-6 h-6" />
-                </a>
-              </div>
+                </div>
+                <IoIosArrowDroprightCircle className="w-6 h-6" />
+              </a>
+
               <p className="sm:text-base opacity-60">
                 Software/Frontend Developer
               </p>
