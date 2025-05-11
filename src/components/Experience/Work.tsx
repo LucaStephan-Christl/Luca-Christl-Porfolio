@@ -56,7 +56,7 @@ function Work() {
         }
         loop
         autoplay
-        className="w-96 h-96 lg:w-[500px] lg:h-[500px]"
+        className="w-64 h-64 md:w-96 md:h-96 lg:w-[500px] lg:h-[500px]"
       />
     </div>
   );
