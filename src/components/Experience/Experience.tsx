@@ -7,10 +7,7 @@ import Section from "../ui/Section";
 function Experience() {
   const [showEducation, setShowEducation] = useState(false);
   return (
-    <Section
-      id="Experience"
-      className="intersect:motion-preset-focus-sm intersect-once intersect:motion-preset-slide-down-right-sm"
-    >
+    <Section id="Experience" className="">
       <div className="backdrop-blur-xl p-2 overflow-hidden">
         <div role="tablist" className="tabs tabs-boxed grid grid-cols-2">
           <button

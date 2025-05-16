@@ -12,8 +12,8 @@ import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
-    <ObserverProvider>
-      <ThemeProvider>
+    <ThemeProvider>
+      <ObserverProvider>
         <Navbar />
         <div className="fixed bg-gradient-to-t opacity-10 from-accent to-transparent size-full -z-10" />
         <Background />
@@ -34,7 +34,7 @@ export default function Home() {
             <Footer />
           </div>
         </div>
-      </ThemeProvider>
-    </ObserverProvider>
+      </ObserverProvider>
+    </ThemeProvider>
   );
 }

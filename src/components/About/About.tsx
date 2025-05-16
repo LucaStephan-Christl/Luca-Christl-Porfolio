@@ -85,7 +85,9 @@ function About() {
               <li key="born" className="stats shadow">
                 <div className="stat">
                   <div className="text-sm">Born</div>
-                  <div className="font-bold text-base">{`09.2001`}</div>
+                  <div className="font-bold text-base">
+                    30.09.2001 in Germany
+                  </div>
                 </div>
               </li>
               <li key="died" className="stats shadow">
@@ -98,7 +100,7 @@ function About() {
                 <div className="stat">
                   <div className="text-sm">Interests</div>
                   <div className="font-bold text-base">
-                    Design, Coding & Sports
+                    Coding, Volleyball, Gym, UI/UX
                   </div>
                 </div>
               </li>

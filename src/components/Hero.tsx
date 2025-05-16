@@ -12,7 +12,9 @@ function Hero() {
       <div className="absolute flex flex-col justify-center items-center inset-0 z-10 bg-base-300 -motion-translate-y-out-100 motion-duration-[1s] motion-delay-[2.5s] motion-ease-in-out">
         <DotLottieReact
           src={
-            "https://lottie.host/1bfefe4b-4ce2-48de-a7e3-caa52831d1f7/A5ILFIuSRd.lottie"
+            Theme === "sunset"
+              ? "https://lottie.host/1bfefe4b-4ce2-48de-a7e3-caa52831d1f7/A5ILFIuSRd.lottie"
+              : "https://lottie.host/a2ce3567-244e-40f3-ba86-9b49a0e32bd7/S3wAvB3Irf.lottie"
           }
           autoplay
           className="lg:w-[500px] motion-preset-blur-down-md motion-preset-focus-lg motion-duration-[1s] motion-ease-in-out"
