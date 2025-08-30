@@ -10,7 +10,7 @@ const projects = [
     title: "Portfolio Website",
     description:
       "A personal portfolio website to showcase my projects, skills, experience and contact information. I also used this as an opportunity to learn Next.js and TailwindCSS.",
-    image: "/images/portfolio.png",
+    image: "/images/portfolio.PNG",
     tags: [
       <div key="next.js" className="badge badge-primary">
         Next.js
