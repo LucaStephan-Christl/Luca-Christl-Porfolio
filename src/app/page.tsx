@@ -15,23 +15,25 @@ export default function Home() {
     <ThemeProvider>
       <ObserverProvider>
         <Navbar />
-        <div className="fixed bg-gradient-to-t opacity-10 from-accent to-transparent size-full -z-10" />
-        <Background />
-        <div className="flex flex-col gap-48">
-          <Hero />
-          <div className="container mx-auto xl:px-0 px-8">
-            <Experience />
-          </div>
-          <Technologies />
-          <div className="container mx-auto xl:px-0 px-8 flex flex-col gap-96">
-            <Projects />
-            <About />
-          </div>
-          <div>
-            <div className="container mx-auto xl:px-0 px-8 flex flex-col gap-96">
-              <Contact />
+        <div className="overflow-hidden">
+          <div className="fixed bg-gradient-to-t opacity-10 from-accent to-transparent size-full -z-10" />
+          <Background />
+          <div className="flex flex-col gap-48">
+            <Hero />
+            <div className="container mx-auto xl:px-0 px-8">
+              <Experience />
             </div>
-            <Footer />
+            <Technologies />
+            <div className="container mx-auto xl:px-0 px-8 flex flex-col gap-48">
+              <Projects />
+              <About />
+            </div>
+            <div>
+              <div className="container mx-auto xl:px-0 px-8 flex flex-col gap-96">
+                <Contact />
+              </div>
+              <Footer />
+            </div>
           </div>
         </div>
       </ObserverProvider>
