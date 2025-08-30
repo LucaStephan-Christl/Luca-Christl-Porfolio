@@ -10,7 +10,7 @@ const projects = [
     title: "Portfolio Website",
     description:
       "A personal portfolio website to showcase my projects, skills, experience and contact information. I also used this as an opportunity to learn Next.js and TailwindCSS.",
-    image: "/images/portfolio.PNG",
+    image: "/images/portfolio.png",
     tags: [
       <div key="next.js" className="badge badge-primary">
         Next.js
@@ -66,39 +66,44 @@ function Projects() {
               src={project.image}
               alt={project.title}
               fill
+              priority
+              loader={({ src }) => src}
               objectPosition="top"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover transition-transform ease-in-out duration-300 group-hover:scale-110"
             />
             {/* Overlay */}
             {currentId === project.id && (
               <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex p-4">
                 <div
-                  className={`flex flex-col flex-grow gap-4 ${
+                  className={`flex flex-col w-full justify-between ${
                     theme.Theme === "sunset"
                       ? "text-base-content"
                       : "text-base-300"
                   }`}
                 >
-                  <div className="flex flex-col gap-2">
-                    <h3 className="text-2xl font-semibold group-hover:motion-preset-blur-right-sm">
-                      {project.title}
-                    </h3>
-                    <p className="text-sm motion-delay-100 group-hover:motion-preset-blur-right-sm">
-                      {project.description}
-                    </p>
+                  <div className="flex flex-col gap-4">
+                    <div className="flex flex-col gap-2">
+                      <h3 className="text-2xl font-semibold group-hover:motion-preset-blur-right-sm">
+                        {project.title}
+                      </h3>
+                      <p className="text-sm motion-delay-100 group-hover:motion-preset-blur-right-sm md:max-w-lg">
+                        {project.description}
+                      </p>
+                    </div>
+                    <div className="flex flex-wrap gap-2 motion-delay-100 group-hover:motion-preset-blur-right-sm">
+                      {project.tags}
+                    </div>
                   </div>
-                  <div className="flex flex-wrap gap-2 motion-delay-100 group-hover:motion-preset-blur-right-sm">
-                    {project.tags}
-                  </div>
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-primary self-end group-hover:motion-preset-blur-left-md"
+                  >
+                    View Project
+                  </a>
                 </div>
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn-primary self-end group-hover:motion-preset-blur-left-md"
-                >
-                  View Project
-                </a>
               </div>
             )}
           </div>
